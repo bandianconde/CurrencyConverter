@@ -18,7 +18,6 @@ while True:
         print("Oh! It is in the cache!")
     else:
         print("Sorry, but it is not in the cache!")
-        # r = requests.get(f"http://www.floatrates.com/daily/{target_currency}.json")
         cache[target_currency] = r.json()[target_currency]['rate']
     
     converted_amount = round(amount * cache[target_currency], 2)
